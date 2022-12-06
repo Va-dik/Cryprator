@@ -1,0 +1,5 @@
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\x64\Debug\Cryprator.vcxproj.AssemblyReference.cache
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\x64\Debug\Cryprator.vcxproj.SuggestedBindingRedirects.cache
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\x64\Debug\Cryprator.vcxproj.GenerateResource.cache
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\x64\Debug\Cryprator.CrypratorForm.resources
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\x64\Debug\Cryprator.AboutProgramForm.resources

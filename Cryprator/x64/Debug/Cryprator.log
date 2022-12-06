@@ -1,0 +1,15 @@
+﻿  CrypratorForm.cpp
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(133,43): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(128,34): warning C4947: System::Security::Cryptography::PasswordDeriveBytes::GetBytes: помечен как устаревший
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(128,34): message : Сообщение: "Rfc2898DeriveBytes replaces PasswordDeriveBytes for deriving key material from a password and is preferred in new applications."
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(129,33): warning C4947: System::Security::Cryptography::PasswordDeriveBytes::GetBytes: помечен как устаревший
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(129,33): message : Сообщение: "Rfc2898DeriveBytes replaces PasswordDeriveBytes for deriving key material from a password and is preferred in new applications."
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(142,20): warning C4101: ee: неиспользованная локальная переменная
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(158,43): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(153,39): warning C4947: System::Security::Cryptography::PasswordDeriveBytes::GetBytes: помечен как устаревший
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(153,39): message : Сообщение: "Rfc2898DeriveBytes replaces PasswordDeriveBytes for deriving key material from a password and is preferred in new applications."
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(154,38): warning C4947: System::Security::Cryptography::PasswordDeriveBytes::GetBytes: помечен как устаревший
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(154,38): message : Сообщение: "Rfc2898DeriveBytes replaces PasswordDeriveBytes for deriving key material from a password and is preferred in new applications."
+D:\CourseWork_Course-3_1\Cryprator\Cryprator\CrypratorForm.cpp(167,20): warning C4101: ee: неиспользованная локальная переменная
+  CrypratorForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Cryprator.vcxproj -> D:\CourseWork_Course-3_1\Cryprator\x64\Debug\Cryprator.exe
