@@ -13,6 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы ресурсов\InitData">
+      <UniqueIdentifier>{5d50315c-7467-404e-8279-b748b01b79ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\TreeView">
+      <UniqueIdentifier>{1a3a6414-dd5a-47ee-ba4d-cd89d6eb5527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\ToolStrip">
+      <UniqueIdentifier>{bbce2dfc-9cf3-432a-bbb9-39cef4fc3be6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\MenuStrip">
+      <UniqueIdentifier>{c1a26c9a-d99d-458a-9e31-71439bb66fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\ExtraMenu">
+      <UniqueIdentifier>{cef4c35b-768b-448c-9bad-4491c7333163}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CrypratorForm.h">
@@ -28,6 +43,42 @@
     </ClCompile>
     <ClCompile Include="AboutProgramForm.cpp">
       <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadForm.cpp">
+      <Filter>Файлы ресурсов\InitData</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtraCrypt.cpp">
+      <Filter>Файлы ресурсов\ExtraMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtraDeCrypt.cpp">
+      <Filter>Файлы ресурсов\ExtraMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtraOpen.cpp">
+      <Filter>Файлы ресурсов\ExtraMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeView_BeforeExpand.cpp">
+      <Filter>Файлы ресурсов\TreeView</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeView_AfterSelect.cpp">
+      <Filter>Файлы ресурсов\TreeView</Filter>
+    </ClCompile>
+    <ClCompile Include="Update.cpp">
+      <Filter>Файлы ресурсов\ToolStrip</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptButton.cpp">
+      <Filter>Файлы ресурсов\ToolStrip</Filter>
+    </ClCompile>
+    <ClCompile Include="DeCryptButton.cpp">
+      <Filter>Файлы ресурсов\ToolStrip</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateButton.cpp">
+      <Filter>Файлы ресурсов\MenuStrip</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutProgram.cpp">
+      <Filter>Файлы ресурсов\MenuStrip</Filter>
+    </ClCompile>
+    <ClCompile Include="Exit.cpp">
+      <Filter>Файлы ресурсов\MenuStrip</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

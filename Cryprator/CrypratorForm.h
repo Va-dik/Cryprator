@@ -46,9 +46,12 @@ namespace Cryprator {
 
 
 	private: System::Windows::Forms::ToolStrip^ toolStrip1;
-	private: System::Windows::Forms::ToolStripButton^ toolStripButton1;
-	private: System::Windows::Forms::ToolStripButton^ toolStripButton2;
-	private: System::Windows::Forms::ToolStripButton^ toolStripButton3;
+	private: System::Windows::Forms::ToolStripButton^ toolStripUpdateButton;
+	private: System::Windows::Forms::ToolStripButton^ toolStripCryptButton;
+	private: System::Windows::Forms::ToolStripButton^ toolStripDeCryptButton;
+
+
+
 
 
 	private: System::Windows::Forms::Panel^ panel1;
@@ -56,16 +59,23 @@ namespace Cryprator {
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::ListView^ listView1;
 	private: System::Windows::Forms::ContextMenuStrip^ extraMenuStrip;
+	private: System::Windows::Forms::ToolStripMenuItem^ CryptToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ DeCryptToolStripMenuItem;
 
 
-	private: System::Windows::Forms::ToolStripMenuItem^ çàøèôğîâàòüToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ äåøèôğîâàòüToolStripMenuItem;
+
+
+
 	private: System::Windows::Forms::ToolStripMenuItem^ ôàéëToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ UpdateToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ îÏğîãğàììåToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ âûõîäToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ AboutProgramToolStripMenuItem;
+
+	private: System::Windows::Forms::ToolStripMenuItem^ ExitToolStripMenuItem;
+
+
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
-	private: System::Windows::Forms::ToolStripMenuItem^ îòêğûòüToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ OpenToolStripMenuItem;
+
 
 
 
@@ -91,22 +101,22 @@ namespace Cryprator {
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(CrypratorForm::typeid));
 			this->toolStrip1 = (gcnew System::Windows::Forms::ToolStrip());
-			this->toolStripButton1 = (gcnew System::Windows::Forms::ToolStripButton());
-			this->toolStripButton2 = (gcnew System::Windows::Forms::ToolStripButton());
-			this->toolStripButton3 = (gcnew System::Windows::Forms::ToolStripButton());
+			this->toolStripUpdateButton = (gcnew System::Windows::Forms::ToolStripButton());
+			this->toolStripCryptButton = (gcnew System::Windows::Forms::ToolStripButton());
+			this->toolStripDeCryptButton = (gcnew System::Windows::Forms::ToolStripButton());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->treeView1 = (gcnew System::Windows::Forms::TreeView());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->listView1 = (gcnew System::Windows::Forms::ListView());
 			this->extraMenuStrip = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
-			this->çàøèôğîâàòüToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->äåøèôğîâàòüToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OpenToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->CryptToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->DeCryptToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ôàéëToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->UpdateToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->îÏğîãğàììåToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->âûõîäToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->AboutProgramToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ExitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->îòêğûòüToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStrip1->SuspendLayout();
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
@@ -119,8 +129,8 @@ namespace Cryprator {
 			this->toolStrip1->BackColor = System::Drawing::Color::Transparent;
 			this->toolStrip1->ImageScalingSize = System::Drawing::Size(22, 22);
 			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->toolStripButton1,
-					this->toolStripButton2, this->toolStripButton3
+				this->toolStripUpdateButton,
+					this->toolStripCryptButton, this->toolStripDeCryptButton
 			});
 			this->toolStrip1->Location = System::Drawing::Point(0, 24);
 			this->toolStrip1->Name = L"toolStrip1";
@@ -128,35 +138,35 @@ namespace Cryprator {
 			this->toolStrip1->TabIndex = 1;
 			this->toolStrip1->Text = L"toolStrip1";
 			// 
-			// toolStripButton1
+			// toolStripUpdateButton
 			// 
-			this->toolStripButton1->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->toolStripButton1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton1.Image")));
-			this->toolStripButton1->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton1->Name = L"toolStripButton1";
-			this->toolStripButton1->Size = System::Drawing::Size(26, 26);
-			this->toolStripButton1->Text = L"toolStripButton1";
-			this->toolStripButton1->Click += gcnew System::EventHandler(this, &CrypratorForm::toolStripButton1_Click);
+			this->toolStripUpdateButton->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
+			this->toolStripUpdateButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripUpdateButton.Image")));
+			this->toolStripUpdateButton->ImageTransparentColor = System::Drawing::Color::Magenta;
+			this->toolStripUpdateButton->Name = L"toolStripUpdateButton";
+			this->toolStripUpdateButton->Size = System::Drawing::Size(26, 26);
+			this->toolStripUpdateButton->Text = L"toolStripButton1";
+			this->toolStripUpdateButton->Click += gcnew System::EventHandler(this, &CrypratorForm::toolStripUpdateButton_Click);
 			// 
-			// toolStripButton2
+			// toolStripCryptButton
 			// 
-			this->toolStripButton2->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->toolStripButton2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton2.Image")));
-			this->toolStripButton2->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton2->Name = L"toolStripButton2";
-			this->toolStripButton2->Size = System::Drawing::Size(26, 26);
-			this->toolStripButton2->Text = L"toolStripButton2";
-			this->toolStripButton2->Click += gcnew System::EventHandler(this, &CrypratorForm::toolStripButton2_Click);
+			this->toolStripCryptButton->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
+			this->toolStripCryptButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripCryptButton.Image")));
+			this->toolStripCryptButton->ImageTransparentColor = System::Drawing::Color::Magenta;
+			this->toolStripCryptButton->Name = L"toolStripCryptButton";
+			this->toolStripCryptButton->Size = System::Drawing::Size(26, 26);
+			this->toolStripCryptButton->Text = L"toolStripButton2";
+			this->toolStripCryptButton->Click += gcnew System::EventHandler(this, &CrypratorForm::toolStripCryptButton_Click);
 			// 
-			// toolStripButton3
+			// toolStripDeCryptButton
 			// 
-			this->toolStripButton3->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->toolStripButton3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton3.Image")));
-			this->toolStripButton3->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton3->Name = L"toolStripButton3";
-			this->toolStripButton3->Size = System::Drawing::Size(26, 26);
-			this->toolStripButton3->Text = L"toolStripButton3";
-			this->toolStripButton3->Click += gcnew System::EventHandler(this, &CrypratorForm::toolStripButton3_Click);
+			this->toolStripDeCryptButton->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
+			this->toolStripDeCryptButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripDeCryptButton.Image")));
+			this->toolStripDeCryptButton->ImageTransparentColor = System::Drawing::Color::Magenta;
+			this->toolStripDeCryptButton->Name = L"toolStripDeCryptButton";
+			this->toolStripDeCryptButton->Size = System::Drawing::Size(26, 26);
+			this->toolStripDeCryptButton->Text = L"toolStripButton3";
+			this->toolStripDeCryptButton->Click += gcnew System::EventHandler(this, &CrypratorForm::toolStripDeCryptButton_Click);
 			// 
 			// panel1
 			// 
@@ -199,36 +209,43 @@ namespace Cryprator {
 			this->listView1->Size = System::Drawing::Size(713, 463);
 			this->listView1->TabIndex = 0;
 			this->listView1->UseCompatibleStateImageBehavior = false;
-			this->listView1->DoubleClick += gcnew System::EventHandler(this, &CrypratorForm::listView1_DoubleClick);
+			this->listView1->DoubleClick += gcnew System::EventHandler(this, &CrypratorForm::Open_DoubleClick);
 			// 
 			// extraMenuStrip
 			// 
 			this->extraMenuStrip->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->îòêğûòüToolStripMenuItem,
-					this->çàøèôğîâàòüToolStripMenuItem1, this->äåøèôğîâàòüToolStripMenuItem
+				this->OpenToolStripMenuItem,
+					this->CryptToolStripMenuItem, this->DeCryptToolStripMenuItem
 			});
 			this->extraMenuStrip->Name = L"contextMenuStrip1";
-			this->extraMenuStrip->Size = System::Drawing::Size(181, 92);
+			this->extraMenuStrip->Size = System::Drawing::Size(153, 70);
 			// 
-			// çàøèôğîâàòüToolStripMenuItem1
+			// OpenToolStripMenuItem
 			// 
-			this->çàøèôğîâàòüToolStripMenuItem1->Name = L"çàøèôğîâàòüToolStripMenuItem1";
-			this->çàøèôğîâàòüToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
-			this->çàøèôğîâàòüToolStripMenuItem1->Text = L"Çàøèôğîâàòü";
-			this->çàøèôğîâàòüToolStripMenuItem1->Click += gcnew System::EventHandler(this, &CrypratorForm::çàøèôğîâàòüToolStripMenuItem1_Click);
+			this->OpenToolStripMenuItem->Name = L"OpenToolStripMenuItem";
+			this->OpenToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->OpenToolStripMenuItem->Text = L"Îòêğûòü";
+			this->OpenToolStripMenuItem->Click += gcnew System::EventHandler(this, &CrypratorForm::OpenToolStripMenuItem_Click);
 			// 
-			// äåøèôğîâàòüToolStripMenuItem
+			// CryptToolStripMenuItem
 			// 
-			this->äåøèôğîâàòüToolStripMenuItem->Name = L"äåøèôğîâàòüToolStripMenuItem";
-			this->äåøèôğîâàòüToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->äåøèôğîâàòüToolStripMenuItem->Text = L"Äåøèôğîâàòü";
-			this->äåøèôğîâàòüToolStripMenuItem->Click += gcnew System::EventHandler(this, &CrypratorForm::äåøèôğîâàòüToolStripMenuItem_Click);
+			this->CryptToolStripMenuItem->Name = L"CryptToolStripMenuItem";
+			this->CryptToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->CryptToolStripMenuItem->Text = L"Çàøèôğîâàòü";
+			this->CryptToolStripMenuItem->Click += gcnew System::EventHandler(this, &CrypratorForm::CryptToolStripMenuItem_Click);
+			// 
+			// DeCryptToolStripMenuItem
+			// 
+			this->DeCryptToolStripMenuItem->Name = L"DeCryptToolStripMenuItem";
+			this->DeCryptToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->DeCryptToolStripMenuItem->Text = L"Äåøèôğîâàòü";
+			this->DeCryptToolStripMenuItem->Click += gcnew System::EventHandler(this, &CrypratorForm::DeCryptToolStripMenuItem_Click);
 			// 
 			// ôàéëToolStripMenuItem
 			// 
 			this->ôàéëToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->UpdateToolStripMenuItem,
-					this->îÏğîãğàììåToolStripMenuItem, this->âûõîäToolStripMenuItem
+					this->AboutProgramToolStripMenuItem, this->ExitToolStripMenuItem
 			});
 			this->ôàéëToolStripMenuItem->Name = L"ôàéëToolStripMenuItem";
 			this->ôàéëToolStripMenuItem->Size = System::Drawing::Size(48, 20);
@@ -237,23 +254,23 @@ namespace Cryprator {
 			// UpdateToolStripMenuItem
 			// 
 			this->UpdateToolStripMenuItem->Name = L"UpdateToolStripMenuItem";
-			this->UpdateToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->UpdateToolStripMenuItem->Size = System::Drawing::Size(149, 22);
 			this->UpdateToolStripMenuItem->Text = L"Îáíîâèòü";
 			this->UpdateToolStripMenuItem->Click += gcnew System::EventHandler(this, &CrypratorForm::UpdateToolStripMenuItem_Click);
 			// 
-			// îÏğîãğàììåToolStripMenuItem
+			// AboutProgramToolStripMenuItem
 			// 
-			this->îÏğîãğàììåToolStripMenuItem->Name = L"îÏğîãğàììåToolStripMenuItem";
-			this->îÏğîãğàììåToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->îÏğîãğàììåToolStripMenuItem->Text = L"Î ïğîãğàììå";
-			this->îÏğîãğàììåToolStripMenuItem->Click += gcnew System::EventHandler(this, &CrypratorForm::îÏğîãğàììåToolStripMenuItem_Click);
+			this->AboutProgramToolStripMenuItem->Name = L"AboutProgramToolStripMenuItem";
+			this->AboutProgramToolStripMenuItem->Size = System::Drawing::Size(149, 22);
+			this->AboutProgramToolStripMenuItem->Text = L"Î ïğîãğàììå";
+			this->AboutProgramToolStripMenuItem->Click += gcnew System::EventHandler(this, &CrypratorForm::AboutProgramToolStripMenuItem_Click);
 			// 
-			// âûõîäToolStripMenuItem
+			// ExitToolStripMenuItem
 			// 
-			this->âûõîäToolStripMenuItem->Name = L"âûõîäToolStripMenuItem";
-			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->âûõîäToolStripMenuItem->Text = L"Âûõîä";
-			this->âûõîäToolStripMenuItem->Click += gcnew System::EventHandler(this, &CrypratorForm::âûõîäToolStripMenuItem_Click);
+			this->ExitToolStripMenuItem->Name = L"ExitToolStripMenuItem";
+			this->ExitToolStripMenuItem->Size = System::Drawing::Size(149, 22);
+			this->ExitToolStripMenuItem->Text = L"Âûõîä";
+			this->ExitToolStripMenuItem->Click += gcnew System::EventHandler(this, &CrypratorForm::ExitToolStripMenuItem_Click);
 			// 
 			// menuStrip1
 			// 
@@ -263,13 +280,6 @@ namespace Cryprator {
 			this->menuStrip1->Size = System::Drawing::Size(965, 24);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
-			// 
-			// îòêğûòüToolStripMenuItem
-			// 
-			this->îòêğûòüToolStripMenuItem->Name = L"îòêğûòüToolStripMenuItem";
-			this->îòêğûòüToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->îòêğûòüToolStripMenuItem->Text = L"Îòêğûòü";
-			this->îòêğûòüToolStripMenuItem->Click += gcnew System::EventHandler(this, &CrypratorForm::îòêğûòüToolStripMenuItem_Click);
 			// 
 			// CrypratorForm
 			// 
@@ -302,18 +312,16 @@ namespace Cryprator {
 	private: System::Void CrypratorForm_Load(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void treeView1_BeforeExpand(System::Object^ sender, System::Windows::Forms::TreeViewCancelEventArgs^ e);
 	private: System::Void treeView1_AfterSelect(System::Object^ sender, System::Windows::Forms::TreeViewEventArgs^ e);
-	private: System::Void toolStripButton1_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void toolStripButton2_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void toolStripButton3_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void toolStripUpdateButton_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void toolStripCryptButton_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void toolStripDeCryptButton_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void UpdateToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void îÏğîãğàììåToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void âûõîäToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void çàøèôğîâàòüToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void ğàñøèôğîâàòüToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void listView1_DoubleClick(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void AboutProgramToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void ExitToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void Open_DoubleClick(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void CryptToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void DeCryptToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void OpenToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 	void AddDirectories(TreeNode^ parentNode);
-	private: System::Void çàøèôğîâàòüToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void äåøèôğîâàòüToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void îòêğûòüToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

@@ -119,8 +119,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AboutProgram.cpp" />
     <ClCompile Include="CrypratorForm.cpp" />
     <ClCompile Include="AboutProgramForm.cpp" />
+    <ClCompile Include="CryptButton.cpp" />
+    <ClCompile Include="DeCryptButton.cpp" />
+    <ClCompile Include="Exit.cpp" />
+    <ClCompile Include="ExtraCrypt.cpp" />
+    <ClCompile Include="ExtraDeCrypt.cpp" />
+    <ClCompile Include="ExtraOpen.cpp" />
+    <ClCompile Include="LoadForm.cpp" />
+    <ClCompile Include="TreeView_AfterSelect.cpp" />
+    <ClCompile Include="TreeView_BeforeExpand.cpp" />
+    <ClCompile Include="Update.cpp" />
+    <ClCompile Include="UpdateButton.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CrypratorForm.h">
